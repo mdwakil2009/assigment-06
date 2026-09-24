@@ -1,23 +1,36 @@
-import Image from 'next/image';
-import React from 'react';
-import BannerImge from "@/assets/banner.png"
+import Image from "next/image";
+import React from "react";
+import BannerImge from "@/assets/banner.png";
+import { oswald } from "@/lib/font";
+
+
 
 const Banner = () => {
-     return (
-          <div>
-               <div>
-                    <span>Workout Library</span>
-                    <h2>Train with intent. Log every set.</h2>
-                    <p>FitLog is a dark, no-nonsense gym companion: pick a lift, lock it into today's plan, and watch the week's work add up.</p>
-                    <button>BROWSE WORKOUTS</button>
+  return (
+    <div className="grid grid-cols-2 justify-between gap-4 items-center text-white
+     bg-[#222630]  px-12 py-16 rounded-4xl mt-10 mx-[50px] " >
+      <div className="space-y-6">
+        <span className={`text-[#C2F800] ${oswald.className} `}>WORKOUT LIBRARY</span>
 
-               </div>
-               <div>
-                    <Image src={BannerImge} alt='Banner img'></Image>
+        <h2 className={`${oswald.className} font-semibold text-5xl`}>
+          TRAIN WITH INTENT. LOG EVERY SET.
+        </h2>
 
-               </div>
-          </div>
-     );
+        <p className="text-[#9CA3AF]">
+          FitLog is a dark, no-nonsense gym companion: pick a lift, lock it into
+          today's plan, and watch the week's work add up.
+        </p>
+
+        <button className="bg-[#C2F800] rounded-lg px-6 py-3 text-[#000000]">
+          BROWSE WORKOUTS
+        </button>
+      </div>
+
+      <div className="flex justify-center">
+        <Image src={BannerImge} alt="Banner img" className="w-full max-w-lg" />
+      </div>
+    </div>
+  );
 };
 
 export default Banner;
