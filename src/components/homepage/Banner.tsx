@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import BannerImge from "@/assets/banner.png";
 import { oswald } from "@/lib/font";
+import { FaArrowRightFromBracket } from "react-icons/fa6";
 
 
 
@@ -21,8 +22,9 @@ const Banner = () => {
           today's plan, and watch the week's work add up.
         </p>
 
-        <button className="bg-[#C2F800] rounded-lg px-6 py-3 text-[#000000]">
+        <button className="flex items-center gap-3 bg-[#C2F800] rounded-lg px-6 py-3 text-[#000000]">
           BROWSE WORKOUTS
+          <FaArrowRightFromBracket />
         </button>
       </div>
 
