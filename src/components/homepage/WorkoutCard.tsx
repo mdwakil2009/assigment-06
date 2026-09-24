@@ -12,9 +12,7 @@ interface IWorkoutLibraryProps {
 
 const WorkoutCard = ({ workoutlibrary }: IWorkoutLibraryProps) => {
   return (
-    <div className="bg-[#222630] rounded-2xl overflow-hidden border border-gray-700">
-
-      
+    <div className="bg-[#222630] rounded-2xl overflow-hidden border border-gray-700 hover:border-[#C2F800] mx-auto max-w-[1200px]  w-full">
       <div className="h-55 overflow-hidden">
         <Image
           src={workoutlibrary.image}
@@ -25,10 +23,7 @@ const WorkoutCard = ({ workoutlibrary }: IWorkoutLibraryProps) => {
         />
       </div>
 
-     
       <div className="p-5">
-
-     
         <div className="flex flex-wrap gap-2 mb-4">
           {workoutlibrary.muscleGroups.map((muscle, ind) => {
             return (
@@ -42,10 +37,7 @@ const WorkoutCard = ({ workoutlibrary }: IWorkoutLibraryProps) => {
           })}
         </div>
 
-      
-        <h3
-          className={`${oswald.className} text-2xl font-semibold mb-3`}
-        >
+        <h3 className={`${oswald.className} text-2xl font-semibold mb-3`}>
           {workoutlibrary.name}
         </h3>
 
@@ -53,17 +45,19 @@ const WorkoutCard = ({ workoutlibrary }: IWorkoutLibraryProps) => {
           {workoutlibrary.equipment}
         </p>
 
-     
         <div className="flex items-center justify-between border-t border-gray-700 pt-4 text-sm">
-          
-          <span className=" flex items-center gap-1" ><PiTimerDuotone /> {workoutlibrary.duration} min</span>
+          <span className=" flex items-center gap-1">
+            <PiTimerDuotone /> {workoutlibrary.duration} min
+          </span>
 
-          <span className="flex items-center gap-1"><TbBrandTinder /> {workoutlibrary.caloriesBurned} kcal</span>
+          <span className="flex items-center gap-1">
+            <TbBrandTinder /> {workoutlibrary.caloriesBurned} kcal
+          </span>
 
-          <span className="flex items-center gap-1"><FaRegStar /> {workoutlibrary.rating}</span>
-             
+          <span className="flex items-center gap-1">
+            <FaRegStar /> {workoutlibrary.rating}
+          </span>
         </div>
-
       </div>
     </div>
   );

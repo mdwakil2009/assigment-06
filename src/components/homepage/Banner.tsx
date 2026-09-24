@@ -4,14 +4,16 @@ import BannerImge from "@/assets/banner.png";
 import { oswald } from "@/lib/font";
 import { FaArrowRightFromBracket } from "react-icons/fa6";
 
-
-
 const Banner = () => {
   return (
-    <div className="grid grid-cols-2 justify-between gap-4 items-center text-white
-     bg-[#222630]  px-12 py-16 rounded-4xl mt-10 mx-[50px] " >
+    <div
+      className="grid grid-cols-2 justify-between gap-4 items-center text-white
+     bg-[#222630]  px-12 py-16 rounded-4xl mt-10 mx-[50px]  mx-auto max-w-[1200px]  w-full"
+    >
       <div className="space-y-6">
-        <span className={`text-[#C2F800] ${oswald.className} `}>WORKOUT LIBRARY</span>
+        <span className={`text-[#C2F800] ${oswald.className} `}>
+          WORKOUT LIBRARY
+        </span>
 
         <h2 className={`${oswald.className} font-semibold text-5xl`}>
           TRAIN WITH INTENT. LOG EVERY SET.
