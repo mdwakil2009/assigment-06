@@ -1,6 +1,7 @@
 import { oswald } from "@/lib/font";
 import { IWorkoutLibrary } from "@/type/WorkoutLibrary";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { FaRegStar } from "react-icons/fa6";
 import { PiTimerDuotone } from "react-icons/pi";
@@ -12,7 +13,8 @@ interface IWorkoutLibraryProps {
 
 const WorkoutCard = ({ workoutlibrary }: IWorkoutLibraryProps) => {
   return (
-    <div className="bg-[#222630] rounded-2xl overflow-hidden border border-gray-700 hover:border-[#C2F800] mx-auto max-w-[1200px]  w-full">
+    <Link href={`/workout/${workoutlibrary.id}`}>  
+    <div className="bg-[#222630] rounded-2xl overflow-hidden border border-gray-700 hover:border-[#C2F800]  mx-auto max-w-[1200px]  w-full">
       <div className="h-55 overflow-hidden">
         <Image
           src={workoutlibrary.image}
@@ -60,6 +62,7 @@ const WorkoutCard = ({ workoutlibrary }: IWorkoutLibraryProps) => {
         </div>
       </div>
     </div>
+    </Link>
   );
 };
 

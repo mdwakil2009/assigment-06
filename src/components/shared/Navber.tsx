@@ -5,8 +5,8 @@ import { oswald } from "@/lib/font";
 
 const Navbar = () => {
   return (
-    <div className="text-white border-b border-gray-700">
-      <nav className="container mx-auto flex justify-between items-center py-6 ">
+    <div className="text-white border-b border-gray-700 ">
+      <nav className=" flex justify-between items-center py-6 max-w-7xl mx-auto px-4">
         <div className="flex items-center font-bold text-2xl gap-3">
           <Image src={logo} className="h-[35px] w-[35px]" alt="Fitlog logo" />
           <h4 className={`${oswald.className}`}>FITLOG</h4>

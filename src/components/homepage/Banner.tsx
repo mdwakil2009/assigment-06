@@ -8,7 +8,8 @@ const Banner = () => {
   return (
     <div
       className="grid grid-cols-2 justify-between gap-4 items-center text-white
-     bg-[#222630]  px-12 py-16 rounded-4xl mt-10 mx-[50px]  mx-auto max-w-[1200px]  w-full"
+     bg-[#222630]  px-12 py-16 rounded-4xl mt-10 mx-[50px]  mx-auto max-w-[1200px] 
+      w-full"
     >
       <div className="space-y-6">
         <span className={`text-[#C2F800] ${oswald.className} `}>
@@ -24,10 +25,10 @@ const Banner = () => {
           today's plan, and watch the week's work add up.
         </p>
 
-        <button className="flex items-center gap-3 bg-[#C2F800] rounded-lg px-6 py-3 text-[#000000]">
+        <a href="#cards"><button className="flex items-center gap-3 bg-[#C2F800] rounded-lg px-6 py-3 text-[#000000]">
           BROWSE WORKOUTS
           <FaArrowRightFromBracket />
-        </button>
+        </button></a>
       </div>
 
       <div className="flex justify-center">
