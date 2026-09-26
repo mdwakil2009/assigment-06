@@ -3,8 +3,6 @@ import { IWorkoutLibrary } from "@/type/WorkoutLibrary";
 import React, {
   createContext,
   ReactNode,
-  use,
-  useContext,
   useState,
 } from "react";
 interface WorkoutContextType {

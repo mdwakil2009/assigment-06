@@ -2,7 +2,6 @@ import { oswald } from "@/lib/font";
 import { IWorkoutLibrary } from "@/type/WorkoutLibrary";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 import { FaRegStar } from "react-icons/fa6";
 import { PiTimerDuotone } from "react-icons/pi";
 import { TbBrandTinder } from "react-icons/tb";

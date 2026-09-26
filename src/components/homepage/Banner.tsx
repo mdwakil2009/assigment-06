@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import React from "react";
 import BannerImge from "@/assets/banner.png";
@@ -15,7 +16,9 @@ const Banner = () => {
       mx-4 sm:mx-6 md:mx-auto
       max-w-[1200px] w-auto"
     >
+      
       <div className="space-y-5 md:space-y-6">
+
         <span
           className={`text-[#C2F800] text-sm sm:text-base ${oswald.className}`}
         >
@@ -35,21 +38,21 @@ const Banner = () => {
           into today's plan, and watch the week's work add up.
         </p>
 
-        <a href="#cards">
-          <button
-            className="flex items-center gap-3
-            bg-[#C2F800] rounded-lg
-            px-5 py-2.5 sm:px-6 sm:py-3
-            text-[#000000] font-medium
-            text-sm sm:text-base
-            cursor-pointer"
-          >
-            BROWSE WORKOUTS
-            <FaArrowRightFromBracket />
-          </button>
+        
+        <a
+          href="#cards"
+          className="flex w-fit items-center gap-3
+          bg-[#C2F800] rounded-lg
+          px-5 py-2.5 sm:px-6 sm:py-3
+          text-[#000000] font-medium
+          text-sm sm:text-base
+          cursor-pointer"
+        >
+          BROWSE WORKOUTS
+          <FaArrowRightFromBracket />
         </a>
-      </div>
 
+      </div>
       <div className="flex justify-center">
         <Image
           src={BannerImge}
@@ -57,8 +60,10 @@ const Banner = () => {
           className="w-full max-w-[350px] sm:max-w-[450px] md:max-w-lg"
         />
       </div>
+
     </div>
   );
 };
 
 export default Banner;
+

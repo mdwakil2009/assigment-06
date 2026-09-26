@@ -1,5 +1,4 @@
 import { oswald } from "@/lib/font";
-import Image from "next/image";
 import React from "react";
 import WorkoutCard from "./WorkoutCard";
 import { IWorkoutLibrary } from "@/type/WorkoutLibrary";
