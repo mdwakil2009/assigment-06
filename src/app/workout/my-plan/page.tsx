@@ -4,11 +4,21 @@ import MyPlanCard from "@/components/shared/MyPlanCard";
 import { WorkoutContext } from "@/context/WorkoutContext";
 import { oswald } from "@/lib/font";
 import Link from "next/link";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { IWorkoutLibrary } from "@/type/WorkoutLibrary";
+import LoadingWorkouts from "./LoadingWorkouts";
 
 const MyPlan = () => {
   const { plan, saved } = useContext(WorkoutContext);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const [sortBy, setSortBy] = useState<"duration" | "calories" | "rating">();
 
@@ -123,13 +133,14 @@ const MyPlan = () => {
           </div>
         </div>
 
-        {/* Workout List */}
         <div
           className={`rounded-2xl ${
             list.length === 0 ? "bg-[#222630] p-6 sm:p-10" : ""
           }`}
         >
-          {list.length > 0 ? (
+          {loading ? (
+            <LoadingWorkouts />
+          ) : list.length > 0 ? (
             <div className="space-y-4">
               {list.map((library) => (
                 <MyPlanCard
@@ -151,8 +162,8 @@ const MyPlan = () => {
 
               <Link
                 href="/"
-                className="inline-block bg-[#C2F800]
-                text-black font-bold px-5 sm:px-6 py-3
+                className="inline-block bg-[#C2F800] 
+               text-black font-bold px-5 sm:px-6 py-3 
                 rounded-xl text-sm sm:text-base"
               >
                 Go to workouts

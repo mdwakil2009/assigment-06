@@ -30,11 +30,11 @@ const Navbar = () => {
           </div>
         </div>
 
-        <ul className="hidden md:flex items-center gap-6">
+        <ul className="hidden md:flex items-center gap-2">
           <li>
             <Link
               href="/"
-              className={`px-3 py-2 rounded-full font-bold ${
+              className={`px-3 py-2 rounded-full font-semibold ${
                 pathname === "/"
                   ? "text-[#C2F800]"
                   : "text-gray-300 hover:bg-gray-600"
@@ -47,7 +47,7 @@ const Navbar = () => {
           <li>
             <Link
               href="/workout/my-plan"
-              className={`px-3 py-2 rounded-full font-bold ${
+              className={`px-3 py-2 rounded-full font-semibold ${
                 pathname === "/workout/my-plan"
                   ? "text-[#C2F800]"
                   : "text-gray-300 hover:bg-gray-600"
