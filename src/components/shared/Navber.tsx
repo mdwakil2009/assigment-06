@@ -24,7 +24,7 @@ const Navbar = () => {
 
           <li>
             <Link
-              href="/plan"
+              href="/workout/my-plan"
               className="text-white px-3 py-2 hover:bg-gray-600 rounded-full active:text-shadow-green-500"
             >
               My Plan
